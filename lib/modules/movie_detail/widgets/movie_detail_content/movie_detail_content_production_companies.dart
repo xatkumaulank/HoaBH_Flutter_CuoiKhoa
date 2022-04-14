@@ -17,7 +17,7 @@ class MovieDetailContentProductionCompanies extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 5),
       child: RichText(
         text: TextSpan(
-          text: 'Companhia(s) produtora(s): ',
+          text: 'Production Company',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Color(0xFF222222),
