@@ -25,7 +25,7 @@ class LoginPage extends GetView<LoginController> {
             padding: const EdgeInsets.only(top: 80),
             child: Column(
               children: [
-                Image.asset('assets/images/logo.png'),
+                Image.asset('assets/images/logo2.png'),
                 const SizedBox(height: 50),
                 SizedBox(
                   width: Get.width * .9,
@@ -35,7 +35,7 @@ class LoginPage extends GetView<LoginController> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    text: 'Đăng nhập bằng Google',
+                    text: 'Đăng nhập Google',
                     onPressed: () => controller.login(),
                   ),
                 ),
