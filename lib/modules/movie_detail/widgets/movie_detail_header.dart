@@ -18,7 +18,7 @@ class MovieDetailHeader extends GetView<MovieDetailController> {
   final List<VideoMovieModel>? videos;
   @override
   Widget build(BuildContext context){
-    if(videos!.isNotEmpty){
+    if(videos?.length != null){
       final YoutubePlayerController _controller = YoutubePlayerController(
         initialVideoId: videos?[0].key ?? '',
         flags: const YoutubePlayerFlags(
@@ -28,12 +28,22 @@ class MovieDetailHeader extends GetView<MovieDetailController> {
           mute: false,
         ),
       );
-      return YoutubePlayer(
-          controller: _controller,
-          showVideoProgressIndicator: true
+      return SizedBox(
+        width: double.infinity,
+        height: 200,
+        child: YoutubePlayer(
+            controller: _controller,
+            showVideoProgressIndicator: true
+        ),
       );
     }else{
-      return const Text('Không có dữ liệu video');
+      return const SizedBox(
+          width: double.infinity,
+          height: 200,
+          child: Center(
+              child: Text('Không có dữ liệu video')
+          )
+      );
     }
   }
 }
