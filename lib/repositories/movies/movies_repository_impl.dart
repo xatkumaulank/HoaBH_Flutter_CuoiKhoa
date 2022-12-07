@@ -38,6 +38,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
 
     if (result.hasError) {
       throw Exception('');
+
     }
     return result.body ?? <MovieModel>[];
   }
